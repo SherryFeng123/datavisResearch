@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
+
+* {
+  color: #333;
+  font-family: "PT Sans", sans-serif;
+}
+
+
+
+body {
+  margin: 1em auto 4em auto;
+  width: 960px;
+}
+
+span.blue {
+  color: #80b1d3;
+}
+
+span.gold {
+  color: #fdb462
+}
+
+span.purple {
+  color: #bc80bd
+}
+
+span.red {
+  color: #fb8072
+}
+
+span.teal {
+  color: #8dd3c7
+}
+
+#experimentr {
+  margin: 4em auto 1em auto;
+  width: 720px;
+}
+
+#control {
+  margin-top: 1em;
+}
+
+#next-button {
+  float: right;
+}
+
+.placeholder {
+  color: steelblue;
+  font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.colorSq {
+	width: 150px;
+}
+
+.indentList {
+	margin-left: 50px;
+}
+
+.splom {
+	width: 700px;
+}
+
+.splot {
+	width: 250px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;*/
+    color: grey;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 12px;
+
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

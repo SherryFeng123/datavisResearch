@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <h2>Quiz 1</h2>
+
+
+  </head>
+
+<body>
+
+  <div id="section2-template">
+  	<div id="question"></div>
+  	<div id="chart"></div>
+  	<div id="warning"></div>
+  </div>
+
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<img src="modules/section1-template/medium_q1_4.png" alt="easy" height = "350" width = "450" border="0"></a>
+
+      <div id = "q9">
+Q9. Select the node(s) that is/are <div class="tooltip">adjacent
+  <span class="tooltiptext">If there is an edge between vertices A and B then both A and B are said to be adjacent</span>
+</div> to 24:
+<br>
+<br>
+
+<input type='checkbox' name='q9' value='1' />
+      <span style="width:15px;display:inline-block;">1</span>
+      <input type='checkbox' name='q9' value='2'/>
+        <span style="width:15px;display:inline-block;">2</span>
+   <input type='checkbox' name='q9' value='3' />
+     <span style="width:15px;display:inline-block;">3</span>
+     <input type='checkbox' name='q9' value='4' />
+       <span style="width:580px;display:inline-block;">4</span>
+     <input type='checkbox' name='q9' value='5' />
+     <span style="width:15px;display:inline-block;">5</span>
+       <input type='checkbox' name='q9' value='6' />
+       <span style="width:15px;display:inline-block;">6</span>
+
+       <input type='checkbox' name='q9' value='7' />
+             <span style="width:15px;display:inline-block;">7</span>
+             <input type='checkbox' name='q9' value='8'/>
+               <span style="width:580px;display:inline-block;">8</span>
+          <input type='checkbox' name='q9' value='9' />
+            <span style="width:15px;display:inline-block;">9</span>
+            <input type='checkbox' name='q9' value='10' />
+              <span style="width:20px;display:inline-block;">10</span>
+            <input type='checkbox' name='q9' value='11' />
+            <span style="width:20px;display:inline-block;">11</span>
+              <input type='checkbox' name='q9' value='12' />
+              <span style="width:570px;display:inline-block;">12</span>
+
+              <input type='checkbox' name='q9' value='13' />
+                    <span style="width:15px;display:inline-block;">13</span>
+                    <input type='checkbox' name='q9' value='14'/>
+                      <span style="width:20px;display:inline-block;">14</span>
+                 <input type='checkbox' name='q9' value='15' />
+                   <span style="width:20px;display:inline-block;">15</span>
+                   <input type='checkbox' name='q9' value='16' />
+                     <span style="width:560px;display:inline-block;">16</span>
+
+                 <input type='checkbox' name='q9' value='17' />
+                   <span style="width:15px;display:inline-block;">17</span>
+                   <input type='checkbox' name='q9' value='18'/>
+                     <span style="width:15px;display:inline-block;">18</span>
+                 <input type='checkbox' name='q9' value='19' />
+                  <span style="width:15px;display:inline-block;">19</span>
+                  <input type='checkbox' name='q9' value='20' />
+                    <span style="width:580px;display:inline-block;">20</span>
+                  <input type='checkbox' name='q9' value='21' />
+                  <span style="width:15px;display:inline-block;">21</span>
+                    <input type='checkbox' name='q9' value='22' />
+                    <span style="width:15px;display:inline-block;">22</span>
+
+                    <input type='checkbox' name='q9' value='23' />
+                          <span style="width:15px;display:inline-block;">23</span>
+                          <input type='checkbox' name='q9' value='24'/>
+                            <span style="width:580px;display:inline-block;">24</span>
+                       <input type='checkbox' name='q9' value='25' />
+                         <span style="width:15px;display:inline-block;">25</span>
+                         <input type='checkbox' name='q9' value='26' />
+                           <span style="width:15px;display:inline-block;">26</span>
+                         <input type='checkbox' name='q9' value='27' />
+                         <span style="width:15px;display:inline-block;">27</span>
+                           <input type='checkbox' name='q9' value='28' />
+                           <span style="width:570px;display:inline-block;">28</span>
+
+                           <input type='checkbox' name='q9' value='29' />
+                                 <span style="width:15px;display:inline-block;">29</span>
+                                 <input type='checkbox' name='q9' value='30'/>
+                                   <span style="width:15px;display:inline-block;">30</span>
+                              <input type='checkbox' name='q9' value='31' />
+                                <span style="width:15px;display:inline-block;">31</span>
+                                <input type='checkbox' name='q9' value='32' />
+                                  <span style="width:15px;display:inline-block;">32</span>
+
+
+
+</div>
+
+
+<!-- <form>
+  q90. What is the indegree of node i?
+<br>
+<input type="text" name="q90"><br>
+</form> -->
+
+
+	</body>
+
+  <script>
+
+//  console.log("starting")
+
+  (function() {
+    var data = {};
+
+    experimentr.startTimer('quiz1_m_q9_time');
+
+    d3.selectAll('input')
+    .filter(function(d) { return this.name === 'q9' ? this : null; })
+    .on('change', function() { data.q9 = this.value; validate(); });
+
+    // d3.selectAll('input')
+    // .filter(function(d) { return this.name === 'q90' ? this : null; })
+    // .on('change', function() { data.q90 = this.value; validate(); });
+
+    function validate() {
+
+      if(data.q9)// && data.q90)
+       {
+  	    experimentr.endTimer('demo');
+  	    experimentr.addData(data);
+  	    experimentr.release();
+  	  }else{
+        console.log("not valid")
+        console.log("response", data)
+      }
+  	}
+  }());
+
+  </script>
